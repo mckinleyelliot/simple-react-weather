@@ -3,6 +3,7 @@ import './index.css';
 
 
 const api = {
+  key: "a1dd9c4e8a72fcb09e668d5bd0167958",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -15,7 +16,7 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
+      fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
         setWeather(result);
@@ -26,7 +27,7 @@ function App() {
   }
 
   const chicago = () => {
-      fetch(`${api.base}weather?q=chicago&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
+      fetch(`${api.base}weather?q=chicago&units=imperial&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
         setWeather(result);
@@ -36,7 +37,7 @@ function App() {
   }
 
   const delphi = () => {
-    fetch(`${api.base}weather?q=delphi&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
+    fetch(`${api.base}weather?q=delphi&units=imperial&APPID=${api.key}`)
     .then(res => res.json())
     .then(result => {
       setWeather(result);
@@ -46,7 +47,7 @@ function App() {
   }
 
 const kankakee = () => {
-  fetch(`${api.base}weather?q=kankakee&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
+  fetch(`${api.base}weather?q=kankakee&units=imperial&APPID=${api.key}`)
   .then(res => res.json())
   .then(result => {
     setWeather(result);
@@ -56,7 +57,7 @@ const kankakee = () => {
 }
 
 const dixon = () => {
-  fetch(`${api.base}weather?q=dixon&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
+  fetch(`${api.base}weather?q=dixon&units=imperial&APPID=${api.key}`)
   .then(res => res.json())
   .then(result => {
     setWeather(result);
